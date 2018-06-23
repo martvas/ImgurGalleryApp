@@ -1,0 +1,40 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp">
+
+    <ImageView
+        android:id="@+id/photo_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/placeholder_img" />
+
+    <ImageView
+        android:id="@+id/ic_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_star_white"
+        app:layout_constraintBottom_toBottomOf="@id/photo_image_view"
+        app:layout_constraintRight_toRightOf="@id/photo_image_view" />
+
+    <ImageView
+        android:id="@+id/ic_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:src="@drawable/ic_file_download_white_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/photo_image_view"
+        app:layout_constraintRight_toLeftOf="@id/ic_star" />
+
+
+</android.support.constraint.ConstraintLayout>

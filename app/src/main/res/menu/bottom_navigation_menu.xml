@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_imgur_search"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:title="@string/search_bn_menu_title" />
+    <item
+        android:id="@+id/action_favorite"
+        android:icon="@drawable/ic_stars_white_24dp"
+        android:title="@string/favorite_menu_title" />
+    <item
+        android:id="@+id/action_downloads"
+        android:icon="@drawable/ic_file_download_white_24dp"
+        android:title="@string/downloads_menu_title" />
+</menu>

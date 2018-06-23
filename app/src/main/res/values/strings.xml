@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyGallery</string>
+    <string name="search_bn_menu_title">Search</string>
+    <string name="favorite_menu_title">Favorite</string>
+    <string name="downloads_menu_title">Downloads</string>
+    <string name="permissons_required">Need permisions</string>
+    <string name="permissions_required_message">Please provide the necessary permissions</string>
+</resources>
