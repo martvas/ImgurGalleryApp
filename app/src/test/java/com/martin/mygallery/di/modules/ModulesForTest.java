@@ -12,7 +12,6 @@ import dagger.Provides;
 
 @Module
 public class ModulesForTest {
-
     @Provides
     public FavoriteListSaver favoriteListSaver() {
         return Mockito.mock(FavoriteListSaver.class);
@@ -30,6 +29,9 @@ public class ModulesForTest {
 
     @Provides
     public LastSearchTagSaver lastSearchTagSaver() {
+        LastSearchTagSaver lastSearchTagSaver = Mockito.mock(LastSearchTagSaver.class);
+        Mockito.when(lastSearchTagSaver.getLastSearchTag()).thenReturn(null);
+
         return Mockito.mock(LastSearchTagSaver.class);
 
     }

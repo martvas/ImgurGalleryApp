@@ -34,6 +34,7 @@ public class ImgurPresenter extends MvpPresenter<ImgurView> implements ImgurList
     @Inject
     LastSearchTagSaver lastSearchTagSaver;
     private Scheduler scheduler;
+
     private List<String> imagesUrlList;
     private List<String> favoriteImagesUrlList;
     private List<String> downloadedImagePathesList;
@@ -53,7 +54,6 @@ public class ImgurPresenter extends MvpPresenter<ImgurView> implements ImgurList
         if (lastTagName == null) {
             getViewState().showError("Please enter some search query to see images");
         } else loadImgurImagesByTag(lastTagName);
-
     }
 
     @SuppressLint("CheckResult")
@@ -71,7 +71,7 @@ public class ImgurPresenter extends MvpPresenter<ImgurView> implements ImgurList
                         }, throwable -> {
                             if (throwable.getMessage().equals(ImgurGalleryRepo.ITEM_EMPTY_EXCEPTION)) {
                                 getViewState().showToast("We don't have images by this tag");
-                            } else getViewState().showError("Failed to get images from Imgur");
+                            } else getViewState().showToast("Failed to get images from Imgur");
                         }
                 );
     }
@@ -80,7 +80,6 @@ public class ImgurPresenter extends MvpPresenter<ImgurView> implements ImgurList
     public void bindImageListRow(int pos, ImgurRowView imgurRowView) {
         if (imagesUrlList != null) {
             imgurRowView.setPictureToContainer(imagesUrlList.get(pos));
-
             if (favoriteImagesUrlList != null && favoriteImagesUrlList.size() > 0) {
                 if (favoriteImagesUrlList.contains(imagesUrlList.get(pos)))
                     imgurRowView.makeFavoriteStarYellow();
