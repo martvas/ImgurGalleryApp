@@ -159,11 +159,6 @@ public class ImgurFragment extends MvpAppCompatFragment implements ImgurView {
         imgurRVAdapter.notifyDataSetChanged();
     }
 
-    @Override
-    public void setQueryToSearchView(String query) {
-        searchView.setQuery(query, false);
-    }
-
     private void requestPermissions() {
         ActivityCompat.requestPermissions(getActivity(), permissons, PERMISSIONS_REQUEST_ID);
     }

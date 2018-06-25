@@ -66,7 +66,6 @@ public class ImgurPresenter extends MvpPresenter<ImgurView> implements ImgurList
                             this.imagesUrlList = imagesUrl;
                             getViewState().showError("");
                             getViewState().hideLoading();
-                            getViewState().setQueryToSearchView(tag);
                             getViewState().updateRVList();
                         }, throwable -> {
                             if (throwable.getMessage().equals(ImgurGalleryRepo.ITEM_EMPTY_EXCEPTION)) {

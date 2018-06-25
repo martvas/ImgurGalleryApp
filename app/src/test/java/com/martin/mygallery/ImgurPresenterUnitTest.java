@@ -61,7 +61,6 @@ public class ImgurPresenterUnitTest {
         testScheduler.advanceTimeBy(1, TimeUnit.SECONDS);
 
         Mockito.verify(imgurView).hideLoading();
-        Mockito.verify(imgurView).setQueryToSearchView("dog");
         Mockito.verify(imgurView).updateRVList();
 
     }

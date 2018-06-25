@@ -17,6 +17,4 @@ public interface ImgurView extends MvpView {
     void showToast(String toastText);
 
     void updateRVList();
-
-    void setQueryToSearchView(String query);
 }
